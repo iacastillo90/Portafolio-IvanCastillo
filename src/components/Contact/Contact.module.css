@@ -1,0 +1,161 @@
+/* Contact.module.css */
+
+.contact {
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.headline {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: var(--font-extrabold);
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--spacing-6);
+}
+
+.headline .accent {
+  display: block;
+}
+
+.subtext {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--spacing-12);
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+/* Cards de contacto */
+.contactCards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-12);
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-5) var(--spacing-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+  text-align: left;
+}
+
+.contactCard:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-surface-2);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-glow);
+}
+
+.contactIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+.contactIcon.email {
+  background: var(--color-primary-dim);
+  color: var(--color-primary);
+}
+
+.contactIcon.linkedin {
+  background: rgba(10, 102, 194, 0.15);
+  color: #0a66c2;
+}
+
+.contactIcon.github {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text);
+}
+
+.contactCard:hover .contactIcon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.contactInfo {}
+
+.contactLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.contactValue {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+}
+
+.contactArrow {
+  margin-left: auto;
+  color: var(--color-text-subtle);
+  transition: transform var(--transition-base), color var(--transition-base);
+}
+
+.contactCard:hover .contactArrow {
+  color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+/* CTA principal */
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4) var(--spacing-8);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-xl);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  border: 2px solid var(--color-primary);
+}
+
+.primaryCta:hover {
+  background: transparent;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-glow-lg);
+  transform: translateY(-3px);
+}
