@@ -1,0 +1,38 @@
+/* ProjectsGrid.module.css */
+
+.projects {
+  background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects::before,
+.projects::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+.projects::before {
+  top: 0;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+.projects::after {
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
