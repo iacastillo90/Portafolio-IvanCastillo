@@ -1,0 +1,119 @@
+/*
+ * variables.css — Fuente de verdad del sistema de diseño
+ *
+ * Paleta elegida: "Noche Digital"
+ * Fondo: #0a0e1a (azul noche muy oscuro, más cálido que negro puro)
+ * Surface: #111827 / #1a2236 (capas de profundidad)
+ * Acento: #00d4ff (cian eléctrico) con soporte en #0ea5e9
+ * El cian fue elegido porque representa conexión, tecnología y fluidez —
+ * y armoniza perfectamente con el perfil de Iván (cloud, backends, sistemas críticos).
+ * El verde esmeralda #10b981 actúa como color secundario de éxito/tech.
+ */
+
+:root {
+  /* ---- COLORES ---- */
+  --color-bg: #0a0e1a;
+  --color-surface: #111827;
+  --color-surface-2: #1a2236;
+  --color-surface-3: #1e2d45;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(0, 212, 255, 0.4);
+
+  /* Acento principal: cian eléctrico */
+  --color-primary: #00d4ff;
+  --color-primary-dim: rgba(0, 212, 255, 0.15);
+  --color-primary-glow: rgba(0, 212, 255, 0.25);
+
+  /* Acento secundario: verde esmeralda */
+  --color-secondary: #10b981;
+  --color-secondary-dim: rgba(16, 185, 129, 0.15);
+
+  /* Acento terciario: violeta suave */
+  --color-accent: #818cf8;
+  --color-accent-dim: rgba(129, 140, 248, 0.15);
+
+  /* Texto */
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-text-subtle: #475569;
+  --color-text-inverse: #0a0e1a;
+
+  /* Estados */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* ---- TIPOGRAFÍA ---- */
+  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* Tamaños de fuente */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* Peso de fuente */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Interlineado */
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* ---- ESPACIADO ---- */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  /* ---- BORDES ---- */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ---- SOMBRAS ---- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.2);
+  --shadow-glow-lg: 0 0 40px rgba(0, 212, 255, 0.3);
+
+  /* ---- TRANSICIONES ---- */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---- LAYOUT ---- */
+  --container-max: 1200px;
+  --container-padding: var(--spacing-6);
+  --navbar-height: 72px;
+  --section-padding: var(--spacing-24);
+}
