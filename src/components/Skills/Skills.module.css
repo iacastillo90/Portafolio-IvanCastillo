@@ -1,0 +1,157 @@
+/* Skills.module.css */
+
+.skills {
+  background: var(--color-bg);
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-6);
+}
+
+.categoryCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-6);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.categoryCard:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-5);
+}
+
+.categoryIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryIcon.primary {
+  background: var(--color-primary-dim);
+  color: var(--color-primary);
+}
+
+.categoryIcon.accent {
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+}
+
+.categoryIcon.secondary {
+  background: var(--color-secondary-dim);
+  color: var(--color-secondary);
+}
+
+.categoryLabel {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+}
+
+/* Skills items */
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.skillItem {}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.skillName {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.skillLevel {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+  font-family: var(--font-mono);
+}
+
+.skillBar {
+  height: 6px;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+}
+
+.skillFill.primary {
+  background: linear-gradient(90deg, var(--color-primary), rgba(0, 212, 255, 0.5));
+}
+
+.skillFill.accent {
+  background: linear-gradient(90deg, var(--color-accent), rgba(129, 140, 248, 0.5));
+}
+
+.skillFill.secondary {
+  background: linear-gradient(90deg, var(--color-secondary), rgba(16, 185, 129, 0.5));
+}
+
+/* Tech cloud al fondo */
+.techCloud {
+  margin-top: var(--spacing-12);
+  text-align: center;
+}
+
+.techCloudTitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-subtle);
+  font-family: var(--font-mono);
+  margin-bottom: var(--spacing-6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  justify-content: center;
+}
+
+.techTag {
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.techTag:hover {
+  background: var(--color-primary-dim);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
